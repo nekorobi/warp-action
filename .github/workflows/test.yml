@@ -1,5 +1,6 @@
 name: test WARP connection
 on:
+  workflow_dispatch:
   schedule:
     - cron: '54 09 * * *'
   push:
