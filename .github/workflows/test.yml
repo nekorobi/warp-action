@@ -1,4 +1,4 @@
-name: test WARP connection
+name: Test WARP connection
 on:
   workflow_dispatch:
   schedule:
