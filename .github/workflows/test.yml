@@ -11,5 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
       - name: Install WARP
-        uses: actions/checkout@v4
+        run: ./install.sh
+      - name: Connect WARP
+        run: ./connect.sh
+      - name: Check connection
+        run: ./status.sh
