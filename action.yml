@@ -1,0 +1,14 @@
+name: WARP action
+description: Install Cloudflare WARP Client, connect WARP
+runs:
+  using: composite
+  steps:
+    - name: Install WARP
+      run: ${{github.action_path}}/install.sh
+      shell: bash
+    - name: Connect WARP
+      run: ${{github.action_path}}/connect.sh
+      shell: bash
+    - name: Check connection
+      run: ${{github.action_path}}/status.sh
+      shell: bash
