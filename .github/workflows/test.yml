@@ -19,4 +19,4 @@ jobs:
       - name: Check connection
         run: ./status.sh
       - name: Disconnect, delete registration
-      - run: warp-cli disconnect && warp-cli --accept-tos registration delete
+        run: warp-cli disconnect && warp-cli --accept-tos registration delete
