@@ -2,14 +2,14 @@ name: Test WARP connection
 on:
   workflow_dispatch:
   schedule:
-    - cron: '54 09 * * *'
+    - cron: '09 04 * * 6'
   push:
     branches: [main, release/*]
     paths: ['*.sh', '*.yml']
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - name: Install WARP
